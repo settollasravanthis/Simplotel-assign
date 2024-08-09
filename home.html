@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container-1{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+        }
+        .navbar ul{
+            margin:0;
+            background-color: #f5867e;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-weight: 600;
+            padding: 15px;
+            font-size: 25px;
+        }
+        li div {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+        }
+        .content{
+            display: flex;
+            width: 100%;
+            height: 90vh;
+            align-items: center;
+           
+        }
+        .page-1-description{
+            width: 50%;
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px; 
+            padding:50px;
+            margin-top: 26px;
+        }
+        .page-1-image{
+            width:50%;
+            min-width: 300px;
+            height: 90vh;
+            object-fit: fill;          
+        }
+        button{
+            background-color: #f5867e;
+            border:none;
+            padding: 10px;
+            width: 200px;
+            color: white;
+            font-size: 20px;
+        }   
+        .container-2{
+            display: flex;
+            gap:50px;
+            height: 100vh; 
+            align-items: center;
+            padding-left: 10%;
+            background: linear-gradient(89.6deg, rgb(254, 255, 194) -0.1%, rgb(255, 210, 165) 37.7%, rgb(211, 140, 173) 101%);
+            
+        }
+        .container-2-child-1{
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-set-all{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap:20px;
+        }
+        .image-set-1{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .image-set-1 img {
+            height: 300px;
+            width: 300px;
+        }
+        .image-set-2{
+            width: 300px;
+            height: 600px;
+        }
+        .page-2-description{
+            display: flex;
+            background-color: #f38766;
+            flex-direction: column;
+            height: max-content;
+            width: 30%;
+            padding: 20px;
+        }
+        .page-2-description h1{
+            font-weight: 600;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        .page-2-description h4{
+            margin-bottom: 0;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .sidebar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: white;
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .sidebar li {
+            width: 100%;
+            padding: 10px 0;
+            list-style: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .container-1 {
+                height: 100%;
+                width: 100%;
+            }
+            .content{
+                flex-direction: column;
+                height: 100%;
+                gap: 20px;
+            }
+            .navbar li:not(:last-child) {
+                display: none;
+            }
+            .navbar ul{
+                padding-right: 20px;
+                justify-content: end;
+            }
+            .page-1-description {
+                padding: 0px;
+                font-size: 18px;
+                width: 100%;
+                gap: 10px;
+            }
+            .page-1-description h1{
+                margin-left: 15px !important;
+                font-size: 25px !important;
+            }
+            .page-1-description p{
+                margin: 15px;
+            }
+            button{
+                margin-left: 15px;
+            }
+            .page-1-image{
+                width: 90%;
+                height: 300px;
+                padding: 0;
+            }
+            .image-set-all{
+                flex-direction: column;
+            }
+            .container-2{
+                padding-top: 20px;
+                flex-direction: column-reverse;
+                padding-left: 0;
+                height: 100%;
+                padding-bottom: 20px;
+            }
+            .image-set-2{
+                height: 300px;
+            }
+            .page-2-description{
+                width: 80%;
+                padding: 10px;
+            }
+            .image-set-all{
+                gap: 10px;
+            }
+            .page-2-description h1{
+                font-size: 25px;
+            }
+            
+        }
+        @media only screen and (min-width: 600px) and (max-width:1024px){
+            .container-1 {
+                height: 100%;
+                width: 100%;
+            }
+            .content{
+                flex-direction: column;
+                height: 100%;
+                gap: 20px;
+            }
+           .navbar ul{
+                font-size: 20px;
+            }
+            .page-1-description {
+                padding: 0px;
+                width: 100%;
+                font-size: 25px;
+                gap: 10px;
+                
+            }
+            .page-1-description p{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            .page-1-description h1{
+                font-size: 35px !important;
+                padding-left: 30px;  
+            }
+            button{
+                margin-left: 30px;
+            }
+            .page-1-image{
+                width: 100%;
+                height: 500px;
+                padding: 0;
+            }
+            .container-2{
+                padding: 20px;
+                height: 100%;
+                padding-left: 0;
+                flex-direction: column-reverse;
+            }
+            .page-2-description{
+                width: 80%;
+                padding: 10px;
+            }
+            .image-set-all{
+                gap: 10px;
+            }
+            .page-2-description h1{
+                font-size: 25px;
+            }
+            .page-2-description{
+                width: max-content;
+                padding: 10px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Order</li>
+                <li>Food</li>
+                <li>Restaurant</li>
+                <li>Testimonials</li>
+                <li>Contact Us</li>
+                <li onclick=showSideBar()>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </li>
+            </ul>
+        </nav><nav class="sidebar">
+            <ul >
+                <li style="width: 200px; font-size:30px; text-align:end;" onclick=hideSideBar()>&#x2715;</li>
+                <li>Home</li>
+                <li>Order</li>
+                <li>Food</li>
+                <li>Restaurant</li>
+                <li>Testimonials</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="content">            
+            <div class="page-1-description">
+              <h1 style="font-size: 50px; margin: 0;">LOREM IPSUM</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus<br>
+                id est vitae dolor rhoncus tristique. Maecenas metus quam,<br>
+                rhoncus euismod lorem in, sollicitudin viverra eros. Donec<br>
+                dictum luctus quam ut tristique. Curabitur nec faucibus purus.<br>
+                Quisque congue sem nec justo mollis, in tincidunt erat pretium.<br>
+                Sed pulvinar, massa ac porta viverra.</p>
+              <button>Click Me</button>
+            </div>
+        <img src="C:\Users\Sravanthi S\OneDrive\Desktop\simplotel\pexels-robin-stickel-70497.jpg" class="page-1-image"/>
+    </div>
+    </div>
+    <div class="container-2">
+       <div class='container-2-child-1'>   
+            <div class="image-set-all">
+                 <div class="image-set-1">
+                    <img src="C:\Users\Sravanthi S\OneDrive\Desktop\simplotel\pexels-rachel-claire-6752433.jpg" alt="claire" >
+                    <img src="C:\Users\Sravanthi S\OneDrive\Desktop\simplotel\pexels-eva-bronzini-6141651.jpg" alt="bronzini">
+                </div>
+                <img src="C:\Users\Sravanthi S\OneDrive\Desktop\simplotel\pexels-mister-mister-3434523.jpg" class="image-set-2"/>
+            </div>
+        </div>
+        <div class="page-2-description">
+            <h4>LOREM IPSUM</h4>
+            <h1>LOREM ipSUm SET AdeMIR</h1>
+            <p style="vertical-align: middle;">Click &#10132;</p>
+        </div>
+    </div>
+    
+    <script>
+        function showSideBar() {
+          document.querySelector(".sidebar").style.display = "flex";
+        }
+        function hideSideBar() {
+          document.querySelector(".sidebar").style.display = "none";
+        }
+        </script>
+</body>
+</html>
